@@ -12,12 +12,12 @@ pthread_mutex_t mutex;
 pthread_cond_t condp, condc;
 
 int produzItem (int base) {
-  usleep(10000);
+  usleep(100);
   return base;
 }
 
 int consomeItem (int item) {
-  usleep(10000);
+  usleep(100);
   return item;
 }
 
@@ -27,8 +27,6 @@ void *produtor(void *param) {
 
   while ( k<=N_NUMBERS ) {
 
-//    while (count == BUFFER_SIZE)
-  //    ; // não faz nada    
     pthread_mutex_lock(&mutex);
     if (count == BUFFER_SIZE)
 	pthread_cond_wait(&condp, &mutex);
