@@ -1,0 +1,21 @@
+mutex db; //variavel global
+cond cond;
+int readers = 0;
+
+void leitor() {
+	lock(db);
+
+	if (readers == K) {
+		wait(db, cond);
+		readers++;
+	}
+
+	unlock(db);
+ 
+	leBancoDeDados();
+
+	lock(db);
+	readers--;
+	signal(cond);
+	unlock(db);
+}
