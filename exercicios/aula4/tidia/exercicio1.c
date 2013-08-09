@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <math.h>
- #include <assert.h>
+#include <assert.h>
 
 #define fori(x) for(int i = 0; i < x; i++)
 
