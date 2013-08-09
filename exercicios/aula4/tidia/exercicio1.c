@@ -82,9 +82,8 @@ int main(int argc, char *argv[]) {
 		means[i] = *(double*)retval;
 	}
 	// calculate total mean from partial means
-	fori(N_THREADS) {
+	fori(N_THREADS)
 		mean += means[i] / N_THREADS;
-	}
 
 	printf("Total mean: %f\n", mean);
 
@@ -95,5 +94,4 @@ int main(int argc, char *argv[]) {
 	pthread_mutex_destroy(&mutex);
 
 	pthread_exit(NULL);
-
 }
