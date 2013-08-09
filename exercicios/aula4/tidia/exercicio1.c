@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <math.h>
+ #include <assert.h>
 
 #define fori(x) for(int i = 0; i < x; i++)
 
@@ -24,6 +25,7 @@ void *Average(void *param) {
 	// define attributes
 	double mean = 0;
 	double *ret = malloc(sizeof(double *));
+	assert(ret);
 	double *roots = *((double**) param);
 	long step = N_MAX / N_THREADS;
 
@@ -51,10 +53,13 @@ void main(int argc, char *argv[]) {
 			break;
 		case 2:
 			N_THREADS = atoi(argv[1]);
+			assert(N_THREADS > 0);
 			break;
 		case 3:
 			N_THREADS = atoi(argv[1]);
 			N_MAX = atoi(argv[2]);
+			assert(N_THREADS > 0);
+			assert(N_MAX > 0);
 			break;
 		default:
 			printf("Usage: ./exercicio1.o [threads] [numbers]\n\n");
