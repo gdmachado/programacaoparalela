@@ -83,7 +83,8 @@ int main(int argc, char *argv[]) {
 	}
 	// calculate total mean from partial means
 	fori(N_THREADS)
-		mean += means[i] / N_THREADS;
+		mean += means[i];
+	mean /= N_THREADS;
 
 	printf("Total mean: %f\n", mean);
 
