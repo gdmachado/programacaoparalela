@@ -1,3 +1,14 @@
+$ ./cpuinfo 
+-> CORE_COUNT:  4
+-> CPU COUNT:  1
+-> CORE PER CPU:  4
+-> CPU VENDOR:  Intel
+-> CPU Type:  Core(TM) CPU@2.90GHz
+-> Platform:  64bit
+-> Kernel Version:  Linux 3.8.0-27-generic #40-Ubuntu SMP Tue Jul 9 00:17:05 UTC 2013
+
+====================================================================================
+
 $ time ./exercicio1.o 1
 -> Total mean: 6666.666717
 -> ./exercicio1.o 1  1,24s user 0,22s system 99% cpu 1,467 total
