@@ -1,6 +1,7 @@
 /*
  * Exercicio 1 - Calcular media de raizes quadradas usando threads
  * Compilar com: gcc ./exercicio1.c -pthread -lm -std=c99
+ * Executar com: ./exercicio1 [N_THREADS] [N_MAX]
  *
  * Nome: Gustavo Danilo Machado
  * RA: 11014507
