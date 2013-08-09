@@ -45,7 +45,7 @@ void *Average(void *param) {
 }
 
 
-int main(int argc, char *argv[]) {
+void main(int argc, char *argv[]) {
 	switch (argc) {
 		case 1:
 			break;
