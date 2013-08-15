@@ -62,7 +62,7 @@ void main(int argc, char *argv[]) {
 			assert(N_MAX > 0);
 			break;
 		default:
-			printf("Usage: ./exercicio1.o [threads] [numbers]\n\n");
+			printf("Usage: ./exercicio1 [threads] [numbers]\n\n");
 			printf("threads: number of threads to be used (optional, defaults to 10e8)\n");
 			printf("numbers: amount of numbers to calculate (optional, defaults to 4)\n");
 			exit(1);
